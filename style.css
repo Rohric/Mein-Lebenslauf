@@ -1,305 +1,141 @@
 body {
-   margin: 0px;
-}
-
-h2 {
-   margin: 0;
-   padding-top: 10px;
-
-
-}
-
-h3 {
-   margin: 0;
-   padding: 0px 0px 10px;
-}
-
-
-/* header */
-
-header {
-   background-color: #E6E2DD;
-   height: 100vh;
-
-
-   nav {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 10px;
-   }
-}
-
-.myself {
-   display: flex;
-   margin-top: 40px;
-}
-
-.myself img {
-   width: 360px;
-   height: 360px;
-}
-
-.myself div {
-   width: 200px;
-   text-align: center;
-   margin-top: 40px;
-   margin-right: 160px;
-   margin-left: 80px;
-
-   h1 {
-      font-size: 32px;
-      margin: 0;
-   }
-
-   p {
-      font-size: 24px;
-   }
-}
-
-.personal-symbols {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 80px 80px;
-   gap: 80px;
-
-   figure {
-      text-align: center;
-   }
-
-   img {
-      width: 120px;
-   }
-}
-
-/* main */
-
-article {
-   background-color: #7F6D6B;
-   text-align: center;
-}
-
-.Zitate {
-   color: white;
-   background-image: url(./img/gameboy.in.wald.png);
-   background-position: top;
-   background-size: cover;
-   /* height: 100vh; */
-   text-align: center;
-
-/* KI GENERIERT */
-
-   max-height: 100vh;
-   /* nimmt max. 60% der Bildschirmhöhe */
-   overflow-y: auto;
-   /* Scrollbar nur wenn nötig */
-   padding-right: 10px;
-   /* kleiner Abstand, damit Scrollbar nicht überlappt */
-   box-sizing: border-box;
-
-
-
-   details {
-      margin: 1rem 0;
-   }
-
-
-   summary {
-      display: inline;
-      cursor: pointer;
-      list-style: none;
-      margin-left: 30px;
-      font-weight: bold;
-      text-align: start;
-
-   }
-
-   blockquote {
-      margin: .5rem 0 0 1rem;
-      padding-left: 1rem;
-      border-left: 3px solid #888;
-      font-style: italic;
-   }
-
-   footer {
-      font-weight: bold;
-      font-style: normal;
-   }
-
-}
-
-.Zitate summary::before {
-   content: " ▶";
-   font-size: 0.9em;
-}
-
-.Zitate details[open] summary::before {
-   content: " ▼";
-}
-
-.quote {
-   background-color: transparent;
-   padding: 1rem;
-   border-radius: 8px;
-   transition: background-color 0.3s ease;
-   text-align: start;
-}
-
-.quote[open] {
-   background-color: rgba(38, 43, 22, 0.4);
-   color: white;
-}
-
-/* about me */
-
-.about_me {
-   background-image: url(./img/gang.jpg);
-   background-size: cover;
-   background-position: center;
-   height: 300px;
-   color: white;
-}
-
-/* Life Station's */
-.stationen {
-   background-image: url(./img/stationen.png);
-   height: 100vh;
-   width: 100%;
-   background-size: cover;
-   background-position: center;
-}
-
-/* KI GENERIERT */
-
-/* Basis-Styles – für kleine Displays */
-body {
-  margin: 0;
+  margin: 0px;
 }
 
 h2 {
   margin: 0;
   padding-top: 10px;
+
+
 }
 
 h3 {
   margin: 0;
-  padding: 0 0 10px;
+  padding: 0px 0px 10px;
 }
+
 
 /* header */
+
 header {
   background-color: #E6E2DD;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+  }
 }
 
-header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-/* Profilbereich */
 .myself {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  gap: 20px;
+  margin-top: 40px;
 }
 
 .myself img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  width: 360px;
+  height: 360px;
+  margin-right: 80px;
 }
 
 .myself div {
-  width: 90%;
+  width: 200px;
   text-align: center;
+  margin-top: 40px;
+  margin-right: 160px;
+  margin-left: 80px;
+
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 24px;
+  }
 }
 
-.myself div h1 {
-  font-size: 26px;
-  margin: 0 0 10px 0;
-}
-
-.myself div p {
-  font-size: 18px;
-}
-
-/* Symbole */
 .personal-symbols {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 40px;
-  margin: 40px 0;
-}
+  justify-content: center;
+  margin: 80px 80px;
+  gap: 80px;
 
-.personal-symbols figure {
-  text-align: center;
-}
+  figure {
+    text-align: center;
+  }
 
-.personal-symbols img {
-  width: 80px;
+  img {
+    width: 120px;
+  }
 }
 
 /* main */
+
 article {
   background-color: #7F6D6B;
   text-align: center;
 }
 
-/* Zitate */
 .Zitate {
   color: white;
   background-image: url(./img/gameboy.in.wald.png);
-  background-position: center top;
+  background-position: top;
   background-size: cover;
+  /* height: 100vh; */
+  text-align: center;
+
+  /* KI GENERIERT */
+
   max-height: 100vh;
+  /* nimmt max. 60% der Bildschirmhöhe */
   overflow-y: auto;
-  text-align: left;
-  padding: 20px 10px;
+  /* Scrollbar nur wenn nötig */
+  padding-right: 10px;
+  /* kleiner Abstand, damit Scrollbar nicht überlappt */
   box-sizing: border-box;
-}
 
-.Zitate details {
-  margin: 1rem 0;
-}
 
-.Zitate summary {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  list-style: none;
-  font-weight: bold;
+
+  details {
+    margin: 1rem 0;
+  }
+
+
+  summary {
+    display: inline;
+    cursor: pointer;
+    list-style: none;
+    margin-left: 30px;
+    font-weight: bold;
+    text-align: start;
+
+  }
+
+  blockquote {
+    margin: .5rem 0 0 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid #888;
+    font-style: italic;
+  }
+
+  footer {
+    font-weight: bold;
+    font-style: normal;
+  }
+
 }
 
 .Zitate summary::before {
-  content: "▶";
-  margin-right: 8px;
-  font-size: 0.8em;
+  content: " ▶";
+  font-size: 0.9em;
 }
 
 .Zitate details[open] summary::before {
-  content: "▼";
-}
-
-.Zitate blockquote {
-  margin: 0.5rem 0 0 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid #888;
-  font-style: italic;
-}
-
-.Zitate footer {
-  font-weight: bold;
-  font-style: normal;
+  content: " ▼";
 }
 
 .quote {
@@ -315,143 +151,22 @@ article {
   color: white;
 }
 
-/* About me / Stationen */
-.stationen {
-  background-image: url(./img/stationen.png);
-  background-position: center;
+/* about me */
+
+.about_me {
+  background-image: url(./img/gang.jpg);
   background-size: cover;
-  min-height: 100vh;
-  width: 100%;
+  background-position: center;
+  height: 300px;
+  color: white;
 }
 
-/* 📱 Ab 576px – kleine Tablets / große Smartphones quer */
-@media (min-width: 576px) {
-  header nav {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
+/* Life Station's */
+.stationen {
+  background-color: #868075;
 
-  .myself {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .myself img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .myself div {
-    width: auto;
-    margin-left: 40px;
-    text-align: left;
-  }
-
-  .myself div h1 {
-    font-size: 28px;
-  }
-
-  .myself div p {
-    font-size: 20px;
-  }
-
-  .personal-symbols {
-    flex-direction: row;
-    justify-content: center;
-    margin: 60px 0;
-    gap: 60px;
-  }
-
-  .personal-symbols img {
-    width: 90px;
-  }
-}
-
-/* 📱 Ab 768px – Tablets hoch */
-@media (min-width: 768px) {
-  .myself img {
-    width: 280px;
-    height: 280px;
-  }
-
-  .myself div h1 {
-    font-size: 30px;
-  }
-
-  .myself div p {
-    font-size: 22px;
-  }
-
-  .personal-symbols img {
-    width: 100px;
-  }
-}
-
-/* 💻 Ab 992px – Tablets quer / kleine Laptops */
-@media (min-width: 992px) {
-  header {
-    min-height: 90vh;
-  }
-
-  .myself {
-    margin-top: 60px;
-  }
-
-  .myself img {
-    width: 320px;
-    height: 320px;
-  }
-
-  .myself div {
-    margin-left: 60px;
-  }
-
-  .personal-symbols {
-    gap: 80px;
-  }
-
-  .personal-symbols img {
-    width: 110px;
-  }
-}
-
-/* 💻 Ab 1200px – Desktops */
-@media (min-width: 1200px) {
-  .myself img {
-    width: 360px;
-    height: 360px;
-  }
-
-  .myself div h1 {
-    font-size: 34px;
-  }
-
-  .myself div p {
-    font-size: 24px;
-  }
-
-  .personal-symbols img {
-    width: 120px;
-  }
-}
-
-/* 🖥 Ab 1400px – große Desktops */
-@media (min-width: 1400px) {
-  header nav {
-    padding: 0 60px;
-  }
-
-  .myself {
-    margin-top: 80px;
-  }
-
-  .personal-symbols {
-    gap: 100px;
-  }
-
-  .Zitate {
-    padding-right: 20px;
+  img {
+    height: 400px;
+    width: 400px;
   }
 }
