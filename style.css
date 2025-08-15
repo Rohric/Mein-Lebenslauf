@@ -5,12 +5,15 @@ body {
 h2 {
    margin: 0;
    padding-top: 10px;
+
+
 }
 
 h3 {
    margin: 0;
-   padding: 0px 0px 10px ;
+   padding: 0px 0px 10px;
 }
+
 
 /* header */
 
@@ -84,6 +87,7 @@ article {
    /* height: 100vh; */
    text-align: center;
 
+/* KI GENERIERT */
 
    max-height: 100vh;
    /* nimmt max. 60% der Bildschirmhöhe */
@@ -126,18 +130,15 @@ article {
 
 .Zitate summary::before {
    content: " ▶";
-   /* kleiner Pfeil */
    font-size: 0.9em;
 }
 
 .Zitate details[open] summary::before {
    content: " ▼";
-   /* Pfeil zeigt nach unten, wenn offen */
 }
 
 .quote {
    background-color: transparent;
-   /* Standard: kein Hintergrund */
    padding: 1rem;
    border-radius: 8px;
    transition: background-color 0.3s ease;
@@ -146,33 +147,311 @@ article {
 
 .quote[open] {
    background-color: rgba(38, 43, 22, 0.4);
-   /* erst wenn ausgeklappt */
    color: white;
 }
 
+/* about me */
+
+.about_me {
+   background-image: url(./img/gang.jpg);
+   background-size: cover;
+   background-position: center;
+   height: 300px;
+   color: white;
+}
+
+/* Life Station's */
+.stationen {
+   background-image: url(./img/stationen.png);
+   height: 100vh;
+   width: 100%;
+   background-size: cover;
+   background-position: center;
+}
+
+/* KI GENERIERT */
+
+/* Basis-Styles – für kleine Displays */
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 10px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+/* header */
+header {
+  background-color: #E6E2DD;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Profilbereich */
+.myself {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.myself img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.myself div {
+  width: 90%;
+  text-align: center;
+}
+
+.myself div h1 {
+  font-size: 26px;
+  margin: 0 0 10px 0;
+}
+
+.myself div p {
+  font-size: 18px;
+}
+
+/* Symbole */
+.personal-symbols {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.personal-symbols figure {
+  text-align: center;
+}
+
+.personal-symbols img {
+  width: 80px;
+}
+
+/* main */
+article {
+  background-color: #7F6D6B;
+  text-align: center;
+}
+
+/* Zitate */
+.Zitate {
+  color: white;
+  background-image: url(./img/gameboy.in.wald.png);
+  background-position: center top;
+  background-size: cover;
+  max-height: 100vh;
+  overflow-y: auto;
+  text-align: left;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.Zitate details {
+  margin: 1rem 0;
+}
 
 .Zitate summary {
-   display: inline-flex;
-   /* macht Platz für Text + Bild */
-   align-items: center;
-   cursor: pointer;
-   font-weight: bold;
-   list-style: none;
-   /* Standard-Pfeil weg */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  font-weight: bold;
 }
 
-.Zitate summary::after {
-   content: "";
-   display: inline-block;
-   width: 16px;
-   /* Bildgröße anpassen */
-   height: 16px;
-   margin-left: 8px;
-   /* Abstand zum Text */
-   background: url("./img/arrow-right.png") no-repeat center/contain;
+.Zitate summary::before {
+  content: "▶";
+  margin-right: 8px;
+  font-size: 0.8em;
 }
 
-.Zitate details[open] summary::after {
-   background-image: url("./img/arrow-down.png");
-   /* anderes Bild wenn offen */
+.Zitate details[open] summary::before {
+  content: "▼";
+}
+
+.Zitate blockquote {
+  margin: 0.5rem 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #888;
+  font-style: italic;
+}
+
+.Zitate footer {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.quote {
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: start;
+}
+
+.quote[open] {
+  background-color: rgba(38, 43, 22, 0.4);
+  color: white;
+}
+
+/* About me / Stationen */
+.stationen {
+  background-image: url(./img/stationen.png);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 📱 Ab 576px – kleine Tablets / große Smartphones quer */
+@media (min-width: 576px) {
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .myself {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .myself img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .myself div {
+    width: auto;
+    margin-left: 40px;
+    text-align: left;
+  }
+
+  .myself div h1 {
+    font-size: 28px;
+  }
+
+  .myself div p {
+    font-size: 20px;
+  }
+
+  .personal-symbols {
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px 0;
+    gap: 60px;
+  }
+
+  .personal-symbols img {
+    width: 90px;
+  }
+}
+
+/* 📱 Ab 768px – Tablets hoch */
+@media (min-width: 768px) {
+  .myself img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .myself div h1 {
+    font-size: 30px;
+  }
+
+  .myself div p {
+    font-size: 22px;
+  }
+
+  .personal-symbols img {
+    width: 100px;
+  }
+}
+
+/* 💻 Ab 992px – Tablets quer / kleine Laptops */
+@media (min-width: 992px) {
+  header {
+    min-height: 90vh;
+  }
+
+  .myself {
+    margin-top: 60px;
+  }
+
+  .myself img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .myself div {
+    margin-left: 60px;
+  }
+
+  .personal-symbols {
+    gap: 80px;
+  }
+
+  .personal-symbols img {
+    width: 110px;
+  }
+}
+
+/* 💻 Ab 1200px – Desktops */
+@media (min-width: 1200px) {
+  .myself img {
+    width: 360px;
+    height: 360px;
+  }
+
+  .myself div h1 {
+    font-size: 34px;
+  }
+
+  .myself div p {
+    font-size: 24px;
+  }
+
+  .personal-symbols img {
+    width: 120px;
+  }
+}
+
+/* 🖥 Ab 1400px – große Desktops */
+@media (min-width: 1400px) {
+  header nav {
+    padding: 0 60px;
+  }
+
+  .myself {
+    margin-top: 80px;
+  }
+
+  .personal-symbols {
+    gap: 100px;
+  }
+
+  .Zitate {
+    padding-right: 20px;
+  }
 }
