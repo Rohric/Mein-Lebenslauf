@@ -196,7 +196,7 @@ header {
 
 header nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -213,8 +213,8 @@ header nav {
 }
 
 .myself img {
-  width: 200px;
-  height: 200px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
@@ -239,6 +239,7 @@ header nav {
   align-items: center;
   gap: 40px;
   margin: 40px 0;
+  
 }
 
 .personal-symbols figure {
@@ -246,7 +247,8 @@ header nav {
 }
 
 .personal-symbols img {
-  width: 80px;
+  width: 40px;
+  height: 40px;
 }
 
 /* main */
@@ -322,6 +324,8 @@ article {
   background-size: cover;
   min-height: 100vh;
   width: 100%;
+  /* width: 300px; */
+  height: 500px;
 }
 
 /* 📱 Ab 576px – kleine Tablets / große Smartphones quer */
