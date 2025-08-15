@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="">Da kommt noch was</a>
+      <a href="">Da kommt noch was</a>
+      <a href="">Da kommt noch was</a>
+      <a href="">Da kommt noch was</a>
+    </nav>
+
+    <section class="myself">
+      <div>
+        <h1>Emil Marsal</h1>
+        <p>hier steht so was kurzes über mich, dev in progrecc, trust in wrong people not in me, und so was</p>
+      </div>
+      <img src="./img/MYSelf header.jpg" alt="">
+    </section>
+
+    <section class="personal-symbols">
+      <figure>
+        <img src="./img/29January.png" alt="">
+        <figcaption>Day of Birth</figcaption>
+      </figure>
+      <figure>
+        <img src="./img/Watermann.png" alt="">
+        <figcaption>Watermann</figcaption>
+      </figure>
+      <figure>
+        <img src="./img/flag-rus-ger.png" alt="">
+        <figcaption>Proud of both Worlds</figcaption>
+      </figure>
+    </section>
+  </header>
+
+
+  <main>
+    <article>
+      <h2>But first</h2>
+      <h3>something about me</h3>
+
+      <section class="Zitate">
+
+        <h2>Love for Media</h2>
+        <p>i grew up in the forest but with ah gameboy in my Hands</p>
+
+        <details class="quote">
+          <summary>🎮 Gaming</summary>
+          <blockquote>
+            <p>“When I was young, I had freedom. But I did not see it. I had time, but I did not know it. And I had
+              love, but I did not feel it. Now, I am a man, and I have none of those things.”</p>
+            <footer><cite> - Ezio Auditore da Firenze
+              </cite></footer>
+          </blockquote>
+          <blockquote>
+            <p>“What matters the most is how you see yourself.”</p>
+            <footer><cite> - Cloud Strife</cite></footer>
+          </blockquote>
+          <blockquote>
+            <p>“Did I ever tell you what the definition of insanity is? Insanity is doing the exact same f*ing thing
+              over and over again, expecting shit to change. That. Is. Crazy.”</p>
+            <footer><cite> - Vaas Montenegro</cite></footer>
+          </blockquote>
+
+        </details>
+        <details class="quote">
+          <summary>🎬 Movies</summary>
+
+          <blockquote>
+            <p>“Take what you can, give nothing back!”</p>
+            <footer><cite> - Pirates’ Code</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“The ones that love us never really leave us.”</p>
+            <footer><cite> - Sirius Black</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“There’s nothing more toxic or deadly than a human child.”</p>
+            <footer><cite> - Roz (Monsters, Inc.)</cite></footer>
+          </blockquote>
+        </details>
+
+        <details class="quote">
+          <summary>📺 Series</summary>
+
+          <blockquote>
+            <p>“Nothing good happens after 2 a.m.”</p>
+            <footer><cite> - Ted Mosby</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“By order of the Peaky Blinders.”</p>
+            <footer><cite> - Thomas Shelby</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“Nothing worth having comes easy.”</p>
+            <footer><cite> - Dr. Kelso</cite></footer>
+          </blockquote>
+        </details>
+
+        <details class="quote"> 
+          <summary>🎌 Anime</summary>
+
+          <blockquote>
+            <p>“This world is cruel. But it’s also very beautiful.”</p>
+            <footer><cite> - Mikasa Ackerman</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“Don’t stop! Run! You must go on living!”</p>
+            <footer><cite> - Kyojuro Rengoku</cite></footer>
+          </blockquote>
+
+          <blockquote>
+            <p>“No one knows what the future holds. That’s why its potential is infinite.”</p>
+            <footer><cite> - Okabe Rintarou</cite></footer>
+          </blockquote>
+        </details>
+        <script>
+          document.querySelectorAll("details").forEach(d => {
+            d.addEventListener("toggle", function () {
+              if (this.open) {
+                this.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            });
+          });
+        </script>
+      </section>
+    </article>
+
+    <article>
+
+    </article>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

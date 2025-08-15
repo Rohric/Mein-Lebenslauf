@@ -1,0 +1,178 @@
+body {
+   margin: 0px;
+}
+
+h2 {
+   margin: 0;
+   padding-top: 10px;
+}
+
+h3 {
+   margin: 0;
+   padding: 0px 0px 10px ;
+}
+
+/* header */
+
+header {
+   background-color: #E6E2DD;
+   height: 100vh;
+
+
+   nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+   }
+}
+
+.myself {
+   display: flex;
+   margin-top: 40px;
+}
+
+.myself img {
+   width: 360px;
+   height: 360px;
+}
+
+.myself div {
+   width: 200px;
+   text-align: center;
+   margin-top: 40px;
+   margin-right: 160px;
+   margin-left: 80px;
+
+   h1 {
+      font-size: 32px;
+      margin: 0;
+   }
+
+   p {
+      font-size: 24px;
+   }
+}
+
+.personal-symbols {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 80px 80px;
+   gap: 80px;
+
+   figure {
+      text-align: center;
+   }
+
+   img {
+      width: 120px;
+   }
+}
+
+/* main */
+
+article {
+   background-color: #7F6D6B;
+   text-align: center;
+}
+
+.Zitate {
+   color: white;
+   background-image: url(./img/gameboy.in.wald.png);
+   background-position: top;
+   background-size: cover;
+   /* height: 100vh; */
+   text-align: center;
+
+
+   max-height: 100vh;
+   /* nimmt max. 60% der Bildschirmhöhe */
+   overflow-y: auto;
+   /* Scrollbar nur wenn nötig */
+   padding-right: 10px;
+   /* kleiner Abstand, damit Scrollbar nicht überlappt */
+   box-sizing: border-box;
+
+
+
+   details {
+      margin: 1rem 0;
+   }
+
+
+   summary {
+      display: inline;
+      cursor: pointer;
+      list-style: none;
+      margin-left: 30px;
+      font-weight: bold;
+      text-align: start;
+
+   }
+
+   blockquote {
+      margin: .5rem 0 0 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #888;
+      font-style: italic;
+   }
+
+   footer {
+      font-weight: bold;
+      font-style: normal;
+   }
+
+}
+
+.Zitate summary::before {
+   content: " ▶";
+   /* kleiner Pfeil */
+   font-size: 0.9em;
+}
+
+.Zitate details[open] summary::before {
+   content: " ▼";
+   /* Pfeil zeigt nach unten, wenn offen */
+}
+
+.quote {
+   background-color: transparent;
+   /* Standard: kein Hintergrund */
+   padding: 1rem;
+   border-radius: 8px;
+   transition: background-color 0.3s ease;
+   text-align: start;
+}
+
+.quote[open] {
+   background-color: rgba(38, 43, 22, 0.4);
+   /* erst wenn ausgeklappt */
+   color: white;
+}
+
+
+.Zitate summary {
+   display: inline-flex;
+   /* macht Platz für Text + Bild */
+   align-items: center;
+   cursor: pointer;
+   font-weight: bold;
+   list-style: none;
+   /* Standard-Pfeil weg */
+}
+
+.Zitate summary::after {
+   content: "";
+   display: inline-block;
+   width: 16px;
+   /* Bildgröße anpassen */
+   height: 16px;
+   margin-left: 8px;
+   /* Abstand zum Text */
+   background: url("./img/arrow-right.png") no-repeat center/contain;
+}
+
+.Zitate details[open] summary::after {
+   background-image: url("./img/arrow-down.png");
+   /* anderes Bild wenn offen */
+}
