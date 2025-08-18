@@ -29,34 +29,15 @@ header {
   }
 }
 
-<<<<<<< HEAD
-=======
-header nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-}
-
-/* Profilbereich */
->>>>>>> fa3480615f17a24a1919b9d93fb3f1d486a039bf
 .myself {
   display: flex;
   margin-top: 40px;
 }
 
 .myself img {
-<<<<<<< HEAD
   width: 360px;
   height: 360px;
   margin-right: 80px;
-=======
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
->>>>>>> fa3480615f17a24a1919b9d93fb3f1d486a039bf
 }
 
 .myself div {
@@ -79,30 +60,17 @@ header nav {
 .personal-symbols {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   justify-content: center;
   margin: 80px 80px;
   gap: 80px;
-=======
-  gap: 40px;
-  margin: 40px 0;
-  
-}
->>>>>>> fa3480615f17a24a1919b9d93fb3f1d486a039bf
 
   figure {
     text-align: center;
   }
 
-<<<<<<< HEAD
   img {
     width: 120px;
   }
-=======
-.personal-symbols img {
-  width: 40px;
-  height: 40px;
->>>>>>> fa3480615f17a24a1919b9d93fb3f1d486a039bf
 }
 
 /* main */
@@ -188,16 +156,9 @@ article {
 .about_me {
   background-image: url(./img/gang.jpg);
   background-size: cover;
-<<<<<<< HEAD
   background-position: center;
   height: 300px;
   color: white;
-=======
-  min-height: 100vh;
-  width: 100%;
-  /* width: 300px; */
-  height: 500px;
->>>>>>> fa3480615f17a24a1919b9d93fb3f1d486a039bf
 }
 
 /* Life Station's */
