@@ -56,6 +56,14 @@ header {
     font-size: 24px;
   }
 }
+.projects{
+  display: flex;
+img{
+  height: 44px;
+  width: 44px;
+  margin: 0;
+}
+}
 
 .personal-symbols {
   display: flex;

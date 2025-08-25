@@ -1,0 +1,41 @@
+
+
+body{
+    margin: 0;
+}
+
+
+
+table {
+    width: 100%;
+    height: 70vh;
+    background-color: #1E6DC9;
+    background-image: url(/img/Projects/Baclground-Color-Marmor.png);
+    background-size: cover;
+}
+
+
+td {
+    width: 25%;
+    text-align: center;
+    font-size: 24px;
+}
+
+td:hover{
+    background-color: rgb(23, 132, 190,0.3);
+    cursor: pointer;
+    
+}
+#delete:hover { background-color: brown;}
+
+#resultArea{
+    height: 30vh;
+    background-image: url(/img/Projects/Baclground-Color\ .png);
+    background-size: cover;
+    font-size: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+}
