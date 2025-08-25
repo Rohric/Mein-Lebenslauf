@@ -19,14 +19,20 @@ td {
     width: 25%;
     text-align: center;
     font-size: 24px;
+    background-color: rgba(63, 55, 55, 0.3);
 }
 
 td:hover{
-    background-color: rgb(23, 132, 190,0.3);
+    background-color: rgba(128, 28, 131, 0.027);
     cursor: pointer;
     
 }
 #delete:hover { background-color: brown;}
+
+#HeadBar{
+    background-image: url(/img/Projects/Baclground-Color-Marmor.png);
+    background-size: cover;
+}
 
 #resultArea{
     height: 30vh;
