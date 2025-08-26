@@ -1,180 +1,54 @@
+/* Global */
 body {
   margin: 0px;
 }
 
-h2 {
-  margin: 0;
-  padding-top: 10px;
-
-
-}
-
-h3 {
-  margin: 0;
-  padding: 0px 0px 10px;
-}
-
-
-/* header */
-
+/* Header */
 header {
-  background-color: #E6E2DD;
-  height: 100vh;
-
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px;
-  }
-}
-
-.myself {
-  display: flex;
-  margin-top: 40px;
-}
-
-.myself img {
-  width: 360px;
-  height: 360px;
-  margin-right: 80px;
-}
-
-.myself div {
-  width: 200px;
-  text-align: center;
-  margin-top: 40px;
-  margin-right: 160px;
-  margin-left: 80px;
-
-  h1 {
-    font-size: 32px;
-    margin: 0;
-  }
-
-  p {
-    font-size: 24px;
-  }
-}
-.projects{
-  display: flex;
-img{
-  height: 44px;
-  width: 44px;
-  margin: 0;
-}
-}
-
-.personal-symbols {
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 80px 80px;
-  gap: 80px;
+  background-image: url(./img/Projects/Baclground-Color-Marmor.png);
+  background-position: center;
+  background-size: cover;
+}
 
-  figure {
-    text-align: center;
+/* Section MySelf */
+.myself {
+  /* background-color: #0B0B0B; */
+  background-image: url(./img/Projects/Baclground-Color\ .png);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  
+  h1{
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
   }
+  img {
+    height: 240px;
+    width: 160px;
+    padding-bottom: 32px;
+  }
+}
 
+/* Section Projects */
+.projects {
+  background-image: url(./img/Projects/Baclground-Color\ .png);
+  background-position: center;
+  background-size: cover;
+text-align: center;
+h4{
+  margin: 0px;
+}
   img {
     width: 120px;
-  }
-}
-
-/* main */
-
-article {
-  background-color: #7F6D6B;
-  text-align: center;
-}
-
-.Zitate {
-  color: white;
-  background-image: url(./img/gameboy.in.wald.png);
-  background-position: top;
-  background-size: cover;
-  /* height: 100vh; */
-  text-align: center;
-
-  /* KI GENERIERT */
-
-  max-height: 100vh;
-  /* nimmt max. 60% der Bildschirmhöhe */
-  overflow-y: auto;
-  /* Scrollbar nur wenn nötig */
-  padding-right: 10px;
-  /* kleiner Abstand, damit Scrollbar nicht überlappt */
-  box-sizing: border-box;
-
-
-
-  details {
-    margin: 1rem 0;
-  }
-
-
-  summary {
-    display: inline;
-    cursor: pointer;
-    list-style: none;
-    margin-left: 30px;
-    font-weight: bold;
-    text-align: start;
-
-  }
-
-  blockquote {
-    margin: .5rem 0 0 1rem;
-    padding-left: 1rem;
-    border-left: 3px solid #888;
-    font-style: italic;
-  }
-
-  footer {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-}
-
-.Zitate summary::before {
-  content: " ▶";
-  font-size: 0.9em;
-}
-
-.Zitate details[open] summary::before {
-  content: " ▼";
-}
-
-.quote {
-  background-color: transparent;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  text-align: start;
-}
-
-.quote[open] {
-  background-color: rgba(38, 43, 22, 0.4);
-  color: white;
-}
-
-/* about me */
-
-.about_me {
-  background-image: url(./img/gang.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  color: white;
-}
-
-/* Life Station's */
-.stationen {
-  background-color: #868075;
-
-  img {
-    height: 400px;
-    width: 400px;
   }
 }

@@ -1,0 +1,21 @@
+body{
+  margin: 0px;
+}
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-image: url(../../img/Projects/Baclground-Color-Marmor.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+section{
+  text-align: center;
+}
+
+.exercise{
+  img{
+    width:160px;}
+}
