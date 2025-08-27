@@ -4,7 +4,7 @@ setLetterTwo()
 
 
 function init(){
-    
+    setLetterTwo();
     setLetterThree('B');
     setLetterFour();
     setLetterFive();
@@ -22,7 +22,7 @@ function setLetterTwo(){
 }
 
 function setLetterThree(){
-    setLetter('third_letter',param);
+    setLetter('third_letter','B');
 }
 
 function setLetterFour(){
@@ -34,7 +34,7 @@ function setLetterFour(){
 
 function setLetterFive(){
 
-    if(age === 18){
+    if(age == 18){
         setLetter('five_letter','G');
     }
 }
@@ -49,7 +49,7 @@ function setLetterSix(){
 function setLetterSeven(){
 
     if(getNumber() >= 20){
-        setLetter('six_letter','E');
+        setLetter('seven_letter','E');
     }
 }
 
@@ -59,17 +59,17 @@ function setLetterSeven(){
 
 function calculateSum(a, b) {
     let sum = a + b;
-    return sum + 1; 
+    return sum; 
 }
 
 function getNumber(){
-    let startValue = "10";
+    let startValue = 20;
     let additionValue = 20;
     let x = 2;
     
-    let step1 = parseInt(startValue) + additionValue;
-    let step2 = step1 * "2";
-    let step3 = step2 / "x";
+    let step1 = (startValue + additionValue);
+    let step2 = step1 * 2;
+    let step3 = step2 / x;
     
     return step3;
 }
@@ -78,11 +78,11 @@ function getNumber(){
 function buildHelloWorld() {
     let str = "HELLO";
     
-    str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase(); 
+    str = str.charAt(0).toLowerCase() + str.slice(1).toLowerCase(); 
     str = str + " "; 
     str = str + "WORLD".toLowerCase();
-    str = str.replace("l", "L"); 
-    str = str.charAt(0).toLowerCase() + str.slice(1);
+    // str = str.replace("l", "L"); 
+    // str = str.charAt(0).toLowerCase() + str.slice(1).toLowerCase;
 
     return str
 }

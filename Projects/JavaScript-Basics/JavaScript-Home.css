@@ -1,6 +1,8 @@
-body{
+body {
   margin: 0px;
+  background-image: url(../../img/Projects/Baclground-Color\ .png);
 }
+
 header {
   height: 80px;
   display: flex;
@@ -11,11 +13,20 @@ header {
 }
 
 
-section{
+section {
   text-align: center;
 }
 
-.exercise{
-  img{
-    width:160px;}
+.exercise {
+  img {
+    width: 160px;
+  }
+
+  figure {
+    border: 3px solid black;
+    padding: 8px;
+    display: inline-block;
+
+  }
+
 }
