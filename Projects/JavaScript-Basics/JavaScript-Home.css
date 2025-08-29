@@ -1,6 +1,8 @@
 body {
   margin: 0px;
   background-image: url(../../img/Projects/Baclground-Color\ .png);
+  background-position: center;
+  background-size: cover;
 }
 
 header {
