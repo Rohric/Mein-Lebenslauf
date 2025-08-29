@@ -29,12 +29,12 @@ function renderTrashNotes() {
 
 // Templates
 function getNoteTemplate(indexNote) {
-  return `<p>+ title: ${notesTitles[indexNote]} -> ${notes[indexNote]} 
+  return `<p>title: ${notesTitles[indexNote]} -> ${notes[indexNote]} 
             <button onclick="moveToTrash(${indexNote})">X</button></p>`;
 }
 
 function getTrashNoteTemplate(indexTrashNote) {
-  return `<p>+ title: ${trashNotesTitles[indexTrashNote]} -> ${trashNotes[indexTrashNote]}
+  return `<p>title: ${trashNotesTitles[indexTrashNote]} -> ${trashNotes[indexTrashNote]}
             <button onclick="deleteTrashNote(${indexTrashNote})">X</button></p>`;
 }
 
