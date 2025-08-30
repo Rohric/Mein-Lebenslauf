@@ -1,4 +1,40 @@
 /* Global */
+
+:root {
+    --bg: #0f1220;
+    /* dunkles Violett/Blau */
+    --panel: #171a2b;
+    --panel-2: #111325;
+    --text: #e6e8ff;
+    --muted: #9aa3c7;
+    --accent: #6dd6ff;
+    --accent-2: #b17fe3;
+    --danger: #ff4d6d;
+    --ok: #25c28a;
+    --warn: #f3b04d;
+    --border: #2a3051;
+    --radius: 16px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
 body {
-  margin: 0px;
+    height: 100%
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 100%;
+    background:
+        radial-gradient(1200px 800px at 20% -10%, rgba(177, 127, 227, .25), transparent 60%),
+        radial-gradient(1000px 700px at 110% 110%, rgba(0, 243, 255, .12), transparent 60%),
+        var(--bg);
+    color: var(--text);
+    font: 16px/1.4 system-ui, Segoe UI, Roboto, Inter, sans-serif;
 }
