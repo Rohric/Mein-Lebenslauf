@@ -8,4 +8,4 @@ let myFancyObject = {
 }
 
 console.log(myFancyObject.age);
-console.log(myFancyObject["name"])
+console.log(myFancyObject["name"]) // eine zweite Variante um auf objecte zuzugreifen. 
