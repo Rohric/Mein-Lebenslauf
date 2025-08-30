@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aufgaben – Arrays 01 (includes, indexOf, shift, unshift, slice, join)</title>
+    <!-- Pfad ggf. anpassen, falls deine style.css woanders liegt -->
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Kein JavaScript in dieser Datei; du bindest deine eigene JS-Datei später ein -->
+</head>
+
+<body>
+    <aside>
+        <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <h1>Arrays · Paket 01</h1>
+        </div>
+        <nav>
+            <a class="nav-btn" href="../../index.html#tasks">← Zurück: Aufgaben & Übungen</a>
+            <a class="nav-btn" href="#intro">🧾 Intro</a>
+            <a class="nav-btn" href="#a1">1 · includes</a>
+            <a class="nav-btn" href="#a2">2 · indexOf</a>
+            <a class="nav-btn" href="#a3">3 · shift</a>
+            <a class="nav-btn" href="#a4">4 · unshift</a>
+            <a class="nav-btn" href="#a5">5 · slice</a>
+            <a class="nav-btn" href="#a6">6 · join</a>
+        </nav>
+        <footer>
+            <p class="muted small">Hinweis: Diese Seite enthält nur Aufgabenbeschreibung & Tests. Die JS-Lösung
+                implementierst du selbst.</p>
+        </footer>
+    </aside>
+    <main>
+        <header class="appbar info">
+            <small class="muted">
+                Ziel: Übe grundlegende Array-Operationen. Implementiere die geforderten Funktionen in deiner eigenen
+                JS-Datei
+                und verifiziere sie mit den angegebenen Test-Snippets (Konsole).
+            </small>
+        </header>
+
+        <!-- Intro -->
+        <section id="intro" class="section">
+            <h2>Arrays – Aufgabenpaket 01</h2>
+            <div class="grid cards">
+                <article class="card">
+                    <h3>Vorgaben</h3>
+                    <ul>
+                        <li>Erzeuge eine JS-Datei (z. B. <code>arrays-01.js</code>) und binde sie bei Bedarf selbst ein.
+                        </li>
+                        <li>Implementiere exakt die geforderten Funktionsnamen & Parameter.</li>
+                        <li>Nutze die Code-Snippets unter <strong>Tests</strong> in der Browser-Konsole.</li>
+                    </ul>
+                    <p class="muted small">Optional: Dokumentiere besondere Randfälle (leere Arrays, nicht vorhandene
+                        Elemente etc.).</p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Aufgabe 1 -->
+        <section id="a1" class="section">
+            <article class="card">
+                <h2>Aufgabenstellung 1: <code>includes</code></h2>
+                <p>Implementiere eine Funktion containsElement(array, element), die true zurückgibt, wenn element im
+                    array enthalten ist, andernfalls false.</p>
+                <h3>Tests (Konsole)</h3>
+                <p>
+                    console.log(containsElement(['Anna', 'Ben', 'Clara'], 'Ben'));     // true <br>
+                    console.log(containsElement(['Anna', 'Ben', 'Clara'], 'Daniel')); // false
+                </p>
+                <div class="card">
+                    <input type="text" placeholder="Name eingeben">
+                    <button>Betätigen</button> <br>
+                    <strong>true / false </strong>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Aufgabe 2 -->
+        <section id="a2" class="section">
+          <article class="card">
+            <h2>Aufgabenstellung 2: <code>indexOf</code></h2>
+            <p>Implementiere eine Funktion findElementIndex(array, element), die den Index des ersten Vorkommens von element im array zurückgibt oder -1, wenn es nicht gefunden wird.</p>
+            <h3>Tests (Konsole)</h3>
+            <p>
+              console.log(findElementIndex([10, 20, 30, 40], 30)); // 2 <br>
+              console.log(findElementIndex([10, 20, 30, 40], 50)); // -1
+            </p>
+          </article>
+        </section>
+        
+        <!-- Aufgabe 3 -->
+        <section id="a3" class="section">
+          <article class="card">
+            <h2>Aufgabenstellung 3: <code>shift</code></h2>
+            <p>Implementiere eine Funktion removeFirstElement(array), die das erste Element aus dem array entfernt und das neue Array zurückgibt.</p>
+            <h3>Tests (Konsole)</h3>
+            <p>
+              console.log(removeFirstElement([10, 20, 30, 40])); // [20, 30, 40] <br>
+              console.log(removeFirstElement(['a', 'b', 'c', 'd'])); // ['b', 'c', 'd']
+            </p>
+          </article>
+        </section>
+        
+        <!-- Aufgabe 4 -->
+        <section id="a4" class="section">
+          <article class="card">
+            <h2>Aufgabenstellung 4: <code>unshift</code></h2>
+            <p>Implementiere eine Funktion addElementToStart(array, element), die das element am Anfang des array hinzufügt und das neue Array zurückgibt.</p>
+            <h3>Tests (Konsole)</h3>
+            <p>
+              console.log(addElementToStart([2, 3, 4], 1)); // [1, 2, 3, 4] <br>
+              console.log(addElementToStart(['b', 'c', 'd'], 'a')); // ['a', 'b', 'c', 'd']
+            </p>
+          </article>
+        </section>
+        
+        <!-- Aufgabe 5 -->
+        <section id="a5" class="section">
+          <article class="card">
+            <h2>Aufgabenstellung 5: <code>slice</code></h2>
+            <p>Implementiere eine Funktion getSubArray(array, start, end), die ein neues Array zurückgibt, das die Elemente von start bis end (nicht eingeschlossen) enthält.</p>
+            <h3>Tests (Konsole)</h3>
+            <p>
+              console.log(getSubArray([1, 2, 3, 4, 5], 1, 4)); // [2, 3, 4] <br>
+              console.log(getSubArray(['a', 'b', 'c', 'd', 'e'], 0, 3)); // ['a', 'b', 'c']
+            </p>
+          </article>
+        </section>
+        
+        <!-- Aufgabe 6 -->
+        <section id="a6" class="section">
+          <article class="card">
+            <h2>Aufgabenstellung 6: <code>join</code></h2>
+            <p>Implementiere eine Funktion joinArray(array, separator), die eine Zeichenkette zurückgibt, die aus den Elementen des array besteht, getrennt durch den separator.</p>
+            <h3>Tests (Konsole)</h3>
+            <p>
+              console.log(joinArray(['apple', 'banana', 'cherry'], ', ')); // "apple, banana, cherry" <br>
+              console.log(joinArray([1, 2, 3, 4], ' - ')); // "1 - 2 - 3 - 4"
+            </p>
+          </article>
+        </section>
+        
+    </main>
+</body>
+
+</html>
