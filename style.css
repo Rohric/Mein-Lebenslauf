@@ -1,5 +1,4 @@
-/* Global */
-
+<<<<<<< HEAD
 :root {
     --bg: #0f1220;
     /* dunkles Violett/Blau */
@@ -22,9 +21,13 @@
 }
 
 html,
+=======
+/* Global */
+>>>>>>> parent of 365b552 (eigenbau der index)
 body {
-    height: 100%
+  margin: 0px;
 }
+<<<<<<< HEAD
 
 body {
     margin: 0;
@@ -38,3 +41,340 @@ body {
     color: var(--text);
     font: 16px/1.4 system-ui, Segoe UI, Roboto, Inter, sans-serif;
 }
+
+/* Sidebar */
+aside {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: conic-gradient(from 210deg, var(--accent), var(--accent-2));
+    box-shadow: var(--shadow)
+}
+
+.logo2 {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    box-shadow: var(--shadow)
+}
+
+.logo3 {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    box-shadow: var(--shadow)
+}
+
+.brand h1 {
+    font-size: 18px;
+    margin: 0
+}
+
+nav {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px
+}
+
+nav a.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    background: #0d1020;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .06s ease, border-color .2s ease, background .2s ease;
+}
+
+nav a.nav-btn:hover {
+    border-color: var(--accent);
+    background: #0f1430
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.small {
+    font-size: 12px
+}
+
+.kbd {
+    border: 1px solid var(--border);
+    border-bottom-color: #000;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: #0b0e1e;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace
+}
+
+/* Main & Header (reine Infoleiste) */
+main {
+    padding: 24px;
+    overflow: auto
+}
+
+header.appbar.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #101430, #0c1128);
+    border-radius: 12px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #0b0e1e;
+    color: var(--text);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn.primary {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, #11183a, #0d1433)
+}
+
+.btn.warn {
+    border-color: var(--warn);
+    color: #ffe7c4
+}
+
+.btn.danger {
+    border-color: var(--danger);
+    color: #ffd5df
+}
+
+.btn.ok {
+    border-color: var(--ok);
+    color: #d5fff1
+}
+
+/* Layout helpers & Cards */
+
+.d_none{
+    display: none;
+}
+
+.grid {
+    display: grid;
+    gap: 16px
+}
+
+.cards {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr))
+}
+
+.card {
+    background: linear-gradient(180deg, #0e1226, #0a0e1e);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow)
+}
+
+.card h3 {
+    margin: 0 0 6px
+}
+
+.card h4 {
+    margin: 0 0 0px
+}
+
+.chips {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.chip {
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--muted)
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.row>* {
+    flex: 1
+}
+
+.field {
+    display: grid;
+    gap: 6px
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #0b0e1e;
+    color: var(--text)
+}
+
+.field textarea {
+    min-height: 90px;
+    resize: vertical
+}
+
+
+/* Sections & No-JS Routing */
+.section {
+    display: none
+}
+
+.section.default {
+    display: block
+}
+
+/* InputFelder */
+input {
+    text-align: center;
+    background-color: transparent; /* durchsichtig */
+    border: 1px solid rgb(80, 78, 78);       /* Rand bleibt sichtbar */
+    border-radius: 8px;
+    color: rgb(80, 78, 78);                  /* Textfarbe, sonst evtl. unsichtbar */
+  }
+  
+
+/* Fallback: Dashboard sichtbar, wenn kein :target */
+.section:target {
+    display: block;
+    animation: fade .18s ease
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(4px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+/* Wenn irgendein :target existiert, Dashboard verstecken */
+body:has(.section:target) .section.default {
+    display: none
+}
+
+/* Aktiven Nav-Link per :has(#id:target) hervorheben */
+body:not(:has(.section:target)) nav a[href="#dashboard"],
+body:has(#dashboard:target) nav a[href="#dashboard"],
+body:has(#projects:target) nav a[href="#projects"],
+body:has(#tasks:target) nav a[href="#tasks"],
+body:has(#cv:target) nav a[href="#cv"],
+body:has(#skills:target) nav a[href="#skills"],
+body:has(#notes:target) nav a[href="#notes"] {
+    border-color: var(--accent);
+    background: #0f1430;
+}
+
+/* CSS-Modal via :target (für Vorlagen) */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    padding: 24px;
+    background: rgba(0, 0, 0, .55);
+    z-index: 50
+}
+
+.modal:target {
+    display: grid;
+    place-items: center
+}
+
+.modal .box {
+    max-width: min(720px, 92vw);
+    width: 100%
+}
+
+/* Responsiv */
+@media (max-width: 960px) {
+    body {
+        grid-template-columns: 1fr
+    }
+
+    aside {
+        display: none
+    }
+}
+
+
+
+
+/* Tabellen im Card-Look */
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #0e1226, #0a0e1e);
+    box-shadow: var(--shadow);
+}
+
+.data-table th,
+.data-table td {
+    text-align: left;
+    padding: 12px 14px;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.data-table thead th {
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    border-top: none;
+}
+
+/* engeres Padding optional */
+.data-table--compact th,
+.data-table--compact td {
+    padding: 10px 12px;
+}
+=======
+>>>>>>> parent of 365b552 (eigenbau der index)
