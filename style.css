@@ -174,6 +174,11 @@ header.appbar.info {
 }
 
 /* Layout helpers & Cards */
+
+.d_none{
+    display: none;
+}
+
 .grid {
     display: grid;
     gap: 16px
@@ -255,6 +260,16 @@ header.appbar.info {
 .section.default {
     display: block
 }
+
+/* InputFelder */
+input {
+    text-align: center;
+    background-color: transparent; /* durchsichtig */
+    border: 1px solid rgb(80, 78, 78);       /* Rand bleibt sichtbar */
+    border-radius: 8px;
+    color: rgb(80, 78, 78);                  /* Textfarbe, sonst evtl. unsichtbar */
+  }
+  
 
 /* Fallback: Dashboard sichtbar, wenn kein :target */
 .section:target {

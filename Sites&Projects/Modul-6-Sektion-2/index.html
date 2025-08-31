@@ -21,14 +21,10 @@
             <a class="nav-btn" href="#DOM">1 · Document Object Model</a>
             <a class="nav-btn" href="#Manipulation">2 . Manipulation</a>
             <a class="nav-btn" href="#Aufgabe">3 · Button hinzufügen</a>
-            <a class="nav-btn" href="#">4 · weitere Seite</a>
-            <a class="nav-btn" href="#">5 · weitere Seite</a>
-            <a class="nav-btn" href="#">6 . weitere Seite</a>
-            <a class="nav-btn" href="#">6 . weitere Seite</a>
-            <a class="nav-btn" href="#">7 . weitere Seite</a>
-            <a class="nav-btn" href="#">8 . weitere Seite</a>
-            <a class="nav-btn" href="#">9 . weitere Seite</a>
-            <a class="nav-btn" href="#">10 .weitere Seite</a>
+            <a class="nav-btn" href="#classList">4 · classList</a>
+            <a class="nav-btn" href="#setAttribute">5 · .setAttribute und value</a>
+            <a class="nav-btn" href="#Aufgabe2">6 . Aufgabe: .setAttribute</a>
+            <a class="nav-btn" href="#onClick">6 . .onclick auf Events im DOM/HTML reagieren</a>
             <a class="nav-btn" href="#Master">X · Master</a>
         </nav>
     </aside>
@@ -135,12 +131,15 @@
                         <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
                             <li>Greift nur auf den sichtbaren Text innerhalb eines Tags zu.</li>
                             <li>Ändert keine Tags, sondern ausschließlich den Text selbst.</li>
-                            <li> <em>Beispiel:</em>document.getElementById("title").innerText<strong>= "Nur Text geändert"</strong></li>
+                            <li> <em>Beispiel:</em>document.getElementById("title").innerText<strong>= "Nur Text
+                                    geändert"</strong></li>
                         </ul>
                         <h4>📦 Anwendungsfälle</h4>
                         <ul>
-                            <li>.innerHTML → Wenn man bewusst HTML-Struktur ändern oder Tags einfügen möchte (z. B. p / b / span).</li>
-                            <li>.innerText → Wenn man nur den Text ändern möchte, ohne die Struktur oder Tags anzutasten (z. B. für Eingaben aus Textboxen).</li>
+                            <li>.innerHTML → Wenn man bewusst HTML-Struktur ändern oder Tags einfügen möchte (z. B. p /
+                                b / span).</li>
+                            <li>.innerText → Wenn man nur den Text ändern möchte, ohne die Struktur oder Tags anzutasten
+                                (z. B. für Eingaben aus Textboxen).</li>
                         </ul>
                     </div>
                 </article>
@@ -190,6 +189,296 @@
             </article>
         </section>
 
+        <!-- .classList -->
+        <section id="classList" class="section">
+            <article class="card">
+                <h2>📘 .classList</h2>
+                <article class="card">
+                    <h4>📘 Was ist .classList</h4>
+                    <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                        <li>.classList ist eine eingebaute Eigenschaft von DOM-Elementen.</li>
+                        <li>Sie erlaubt den Zugriff auf die CSS-Klassen eines Elements.</li>
+                        <li>Damit kann man Klassen hinzufügen, entfernen oder umschalten, ohne den ganzen classString
+                            manuell zu bearbeiten.</li>
+                        <li>👉 Vorteil: sicherer und einfacher, als direkt mit element.className zu arbeiten.</li>
+                    </ul>
+                    <div class="chips">
+                        <span class="chip">HTMl</span>
+                        <span class="chip">function</span>
+                    </div> <br>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>➕ .classList.add()</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Fügt dem Element eine neue Klasse hinzu.</li>
+                            <li>Wenn die Klasse schon existiert → passiert nichts.</li>
+                            <li>let box = document.getElementById("myBox");
+                                box.classList.add("active");</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>➖ .classList.remove()</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Entfernt eine bestimmte Klasse vom Element.</li>
+                            <li>Wenn die Klasse nicht existiert → passiert nichts.</li>
+                            <li>box.classList.remove("active");</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>🔀 .classList.toggle()</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Schaltet eine Klasse an oder aus.</li>
+                            <li>Ist die Klasse nicht vorhanden → wird sie hinzugefügt.</li>
+                            <li>Ist sie vorhanden → wird sie entfernt.</li>
+                            <li>box.classList.toggle("highlight");</li>
+                        </ul>
+                    </div>
+                </article>
+            </article>
+        </section>
+
+        <!-- .setAttribute und value -->
+        <section id="setAttribute" class="section">
+
+            <article class="card">
+                <h2>⚙️ .setAttribute und value</h2>
+                <article class="card">
+                    <h3>⚙️ HTML bearbeiten mit JS</h3>
+                    <span>Nun kann man schon fast die gesamte HTML und style bearbeiten </span> <br>
+                    <small>setAttribute → Attribute setzen oder ändern (HTML-Ebene).</small> <br>
+                    <small>value → den aktuellen Eingabewert lesen oder ändern (DOM-Ebene).</small>
+                    <div class="chips">
+                        <span class="chip">HTMl</span>
+                        <span class="chip">function</span>
+                    </div> <br>
+                    <article class="card">
+                        <h3>✅ Best Practices</h3>
+                        <span>Für Formulareingaben → .value nutzen, um aktuelle Inhalte auszulesen oder zu
+                            ändern.</span><br>
+                        <span>Für Attribute allgemein → .setAttribute() verwenden (z. B. src, alt, id,
+                            class).</span><br>
+                        <span>Nicht verwechseln: .value ≠ setAttribute("value", ...).</span>
+                    </article> <br>
+                    <article class="card">
+                        <h3>💡 Merksatz</h3>
+                        <span>setAttribute → Attribute setzen oder ändern (HTML-Ebene).</span> <br>
+                        <span>value → den aktuellen Eingabewert lesen oder ändern (DOM-Ebene).</span>
+                    </article>
+                    <br>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>📘 setAttribute</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Mit .setAttribute(name, wert) kann man einem Element Attribute hinzufügen oder ändern
+                            </li>
+                            <li>Funktioniert für jedes HTML-Attribut (z. B. src, alt, href, id, class, type).</li>
+                        </ul>
+                        <!-- HTML-Einbindung -->
+                        <article class="class">
+                            <h3>Beispiel</h3>
+                            <input class="class" id="Beispiel1" type="text" placeholder="Eingabe">
+                        </article>
+                    </div>
+
+                    <div class="class" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>📘 value</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Das valueAttribut gibt den aktuellen Wert von Eingabefeldern zurück oder setzt ihn.</li>
+                            <li>Funktioniert bei : input, textarea, select und Buttons.</li>
+                        </ul>
+                        <!-- HTML-Einbindung -->
+                        <article class="class">
+                            <h3>Beispiel</h3>
+                            <input class="class" id="Beispiel2" type="text" placeholder="Eingabe" value="Emil">
+                        </article>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>📦 Unterschied</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>setAttribute("value", ...) → ändert das HTML-Attribut selbst (ursprünglicher
+                                Standardwert).</li>
+                            <li>.value → arbeitet mit dem aktuellen Wert im DOM (also auch das, was der User eingegeben
+                                hat).</li>
+                        </ul>
+                        <!-- HTML-Einbindung -->
+                        <article class="class">
+                            <h3>Beispiel</h3>
+                            <input class="class" id="Beispiel3" type="text" placeholder="Eingabe" value="Emil">
+                        </article>
+                    </div>
+                </article>
+
+
+
+            </article>
+        </section>
+
+        <!-- Aufgaben: .setAttribute -->
+        <section id="Aufgabe2" class="section">
+
+            <article class="card">
+                <h2>Aufgabe: .setAttribute</h2>
+                <article class="card">
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>1. Aufgabe:</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Erstelle ein p-tag mit einer selbst gewählten id und Inhalt</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>2. Aufgabe</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Füge mit JavaScript dem p-tag einen title hinzu</li>
+                            <li>Hinweis: das title Attribute ist meist auch als Tooltip zu verstehen, mehr dazu z.B.
+                                hier:</li>
+                            <li><a href=" https://www.w3schools.com/tags/att_global_title.asp">W3schools</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>3. Probiere aus:</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Kannst du auch eine css class mit setAttribute hinzufügen?</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>4. Probiere aus:</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Worin liegt der Unterschied von classList.add("test_class") und setAttribute("class",
+                                "test_class")?</li>
+                            <li>Hinweis: Füge hierzu vorher schon einmal eine andere class ein!</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>Wichtiger Tipp:</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Du siehst, dass manchmal beides geht, sowohl setAttribute() als auch der direkte
+                                Zugriff.</li>
+                            <li>Hierbei sollte dein Entwicklergeist geweckt sein. Wenn du nicht sicher bist, wie oder ob
+                                etwas geht, dann probier es aus!</li>
+                            <li><strong>Genau das macht dich zum Entwickler!!</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>Vorbereitung nächstes Video:</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Erstelle im CSS eine Klasse d_none, diese sollte "display:none;" beinhalten</li>
+                            <li>Bau nun eine Funktion, die die Klasse "d_none" mit classList.toggle() hinzufügt/entfernt
+                                bei einem beliebigen HTML Element.</li>
+                            <li>Hinweis: Beliebig heißt hier, dass die id aus dem Parameter der Funktion genommen wird.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="task2" class="card">
+
+
+                        <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+                        <p title="Free Web tutorials">W3Schools.com</p>
+                    </div>
+                    <article class="card">
+                        <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                            <h4>Erweitern vs. Überschreiben</h4>
+                            <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                                <li>el.classList.add("test_class") fügt die Klasse hinzu und lässt alle vorhandenen
+                                    Klassen stehen.</li>
+                                <li>el.setAttribute("class","test_class") setzt das komplette class-Attribut neu – alle
+                                    bisherigen Klassen sind weg.</li>
+                            </ul>
+                        </div>
+
+                        <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                            <h4>Doppelte Klassen vermeiden</h4>
+                            <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                                <li>classList.add ist idempotent: fügt eine Klasse nur hinzu, wenn sie noch nicht
+                                    existiert.</li>
+                                <li>Bei setAttribute musst du selbst zusammenbauen (z. B. el.getAttribute("class") + "
+                                    test_class"), riskierst aber Duplikate/Mehrfach-Spaces.</li>
+                            </ul>
+                        </div>
+
+                        <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                            <h4>Bequeme Methoden</h4>
+                            <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                                <li>classList bietet add, remove, toggle, contains, replace – bequem und sicher für
+                                    einzelne Klassen.</li>
+                                <li>setAttribute kann nur den ganzen String setzen (z. B. "a b c").</li>
+                            </ul>
+                        </div>
+
+                        <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                            <h4>Wann welches?</h4>
+                            <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                                <li>classList.add für die Praxis fast immer richtig: einzelne Klasse hinzufügen, ohne
+                                    andere zu zerstören.</li>
+                                <li>setAttribute("class", "...") nur, wenn du bewusst die gesamte Klassenliste
+                                    definieren/überschreiben willst (z. B. Reset auf einen festen Zustand).</li>
+                            </ul>
+                        </div>
+
+                    </article>
+
+                </article>
+            </article>
+            </article>
+        </section>
+
+        <!--onclick -> auf Events im DOM/HTML reagieren. -->
+        <section id="onClick" class="section">
+            <article class="card">
+                <h2>auf Events im DOM/HTML reagieren</h2>
+                <article class="card">
+                    <h3>conclick</h3>
+                    <span>Wir können von Java auf HTMl zugreifen, jedoch wollen wir auch von HTML aus JS
+                        ausführen</span> <br>
+                    <small>Buttons! Man wil draufdrücken und ein Ergebnis</small>
+                    <div class="chips">
+                        <span class="chip">onClick</span>
+                        <span class="chip">HTML macht JS</span>
+                    </div> <br>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>📘 Was ist ein Event?</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Ein Event ist ein „Ereignis“ im Browser.</li>
+                            <li>Beispiele: Klick auf einen Button, Maus bewegt sich, Tastatur-Eingabe, Seite lädt.</li>
+                            <li>Jedes Event kann mit JavaScript „abgehört“ werden.</li>
+                        </ul>
+                        <h4>⏰ Wann wird ein Event ausgelöst?</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Ein Event wird immer dann ausgelöst, wenn die zugehörige Aktion im Browser passiert.</li>
+                            <h4>Beispiel:</h4>
+                            <li>onclick → sobald ein Nutzer auf ein Element klickt.</li>
+                            <li>oninput → sobald ein Nutzer in ein Feld tippt.</li>
+                            <li>onload → sobald die Seite fertig geladen ist.</li>
+                            <h4>👉 Warum braucht man Events?</h4>
+                            <li>Damit eine Website interaktiv wird.</li>
+                            <li>Ohne Events wäre eine Website nur statisch (nur HTML + CSS).</li>
+                            <li>Events machen es möglich, auf das Verhalten des Nutzers zu reagieren (z. B. Klick = Formular senden, Button färbt sich um, Popup öffnen).</li>
+                        </ul>
+                    </div>
+
+                </article>
+                <!-- HTML-Einbindung -->
+                <article class="card">
+                    <h3>HTMl Implimintierung</h3>
+                    <h4>Hier wird sich was veränder!</h4>
+                    <p id="raus">ich bin das P Tag!</p>
+                    <button class="btn" onclick="toggleDNone('raus')">bitte ausführen</button>
+                </article>
+            </article>
+        </section>
+
+        </section>
+
         <!-- Master -->
         <section id="Master" class="section">
 
@@ -203,8 +492,6 @@
                         <span class="chip">HTMl</span>
                         <span class="chip">function</span>
                     </div> <br>
-                    </div>
-                    <br>
 
                     <div class="btn" style="display:block; padding:10px 14px; margin:4px">
                         <h4>Beispiel</h4>
@@ -214,6 +501,7 @@
                             <li> <em>Beispiel:</em>console.log<strong></strong>// </li>
                         </ul>
                     </div>
+
                 </article>
                 <!-- HTML-Einbindung -->
                 <article class="card">
