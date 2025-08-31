@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modul 6 Sektion 2: DOM-Manipulation</title>
+    <link rel="stylesheet" href="../../style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <aside>
+        <div class="brand">
+            <img class="logo2" src="../../assets/icon/Icon_JSBasics.png" alt="">
+            <h1>JS-Kurs · Doku</h1>
+        </div>
+        <nav>
+            <a class="nav-btn" href="../../index.html#tasks">← Zurück</a>
+            <a class="nav-btn" href="#DOM">1 · Document Object Model</a>
+            <a class="nav-btn" href="#Manipulation">2 . Manipulation</a>
+            <a class="nav-btn" href="#Aufgabe">3 · Button hinzufügen</a>
+            <a class="nav-btn" href="#">4 · weitere Seite</a>
+            <a class="nav-btn" href="#">5 · weitere Seite</a>
+            <a class="nav-btn" href="#">6 . weitere Seite</a>
+            <a class="nav-btn" href="#">6 . weitere Seite</a>
+            <a class="nav-btn" href="#">7 . weitere Seite</a>
+            <a class="nav-btn" href="#">8 . weitere Seite</a>
+            <a class="nav-btn" href="#">9 . weitere Seite</a>
+            <a class="nav-btn" href="#">10 .weitere Seite</a>
+            <a class="nav-btn" href="#Master">X · Master</a>
+        </nav>
+    </aside>
+
+    <main>
+        <header class="appbar info">
+            <small class="muted">Kurze Erklärungen + Beispielcode. Du führst alles in der Browser-Konsole aus
+                (F12).</small>
+        </header>
+
+        <!-- DOM - Document Object Model -->
+        <section id="DOM" class="section">
+            <article class="card">
+                <article class="section">
+                    <h2>Document Object Model <br>Kurz: DOM</h2>
+                    <span>Kleine Funktionen, klare Namen – der DOM dankt es dir.</span> <br>
+                    <small>getElementById ist schnell und eindeutig – vergib sprechende, einzigartige IDs</small> <br>
+                    <span class="chip">ID</span>
+                    <span class="chip">getElementById</span>
+                    <span class="chip">Struktur</span>
+                </article>
+
+                <article class="card">
+                    <h3>Was ist das DOM</h3>
+                    <span>Das DOM <strong>(Document Object Model)</strong> ist die Schnittstelle zwischen HTML und
+                        dynamischem JavaScript. <br>
+                        Alle Elemente werden zu Objekten, die dynamisch aufgerufen, verändert, hinzugefügt und gelöscht
+                        werden können.</span> <br>
+                    <small>Das DOM ist wie ein Bauplan der Webseite – JavaScript kann diesen Bauplan jederzeit
+                        verändern.</small>
+                    <div class="chips">
+                        <span class="chip">DOM</span>
+                        <span class="chip">Document Object Model</span>
+                        <span class="chip">Schnittstelle</span>
+                        <span class="chip">Bauplan</span>
+                        <span class="chip">Alles ist Objecte</span>
+                    </div>
+                    <br>
+                    <h3>Gut zu wissen</h3>
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>📜 document</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>getElementById("...") → sucht ein Element mit einer bestimmten ID.</li>
+                            <li>Ergebnis ist ein Verweis auf dieses DOM-Element.</li>
+                            <li> <em>Beispiel:</em> <strong>console.log(document.title);</strong> // gibt
+                                den Titel
+                                der Seite aus</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>🧾 Zugriff auf Elemente : <em>document.getElementById</em></h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>ist ein vordefiniertes Objekt in JavaScript, das die gesamte HTML-Seite
+                                repräsentiert.</li>
+                            <li>Damit beginnt jeder Zugriff auf Elemente im DOM.</li>
+                            <li>Im HTML muss also eine id=" " vergeben werden.</li>
+                            <li> <em>Beispiel:</em> <strong>let title =
+                                    document.getElementById("meinTitel");</strong> // das Element kann nun
+                                bearbeitet -> Manipuliert werden.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>✍️ .innerHTML</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Mit .innerHTML greift man auf den Inhalt eines Elements zu.</li>
+                            <li>Man kann den Inhalt lesen oder ändern.</li>
+                        </ul>
+                    </div>
+
+        </section>
+
+        <!-- DOM - Manipulation -->
+        <section id="Manipulation" class="section">
+
+            <article class="card">
+                <h2>Dom Manipulation </h2>
+                <article class="card">
+                    <h3>Unterschied zwischen: <br>.innerHTML & .innerText </h3>
+                    <span>Merksatz</span> <br>
+                    <small>kleine randnotiz</small>
+                    <div class="chips">
+                        <span class="chip">.innerHTML</span>
+                        <span class="chip">.innerText</span>
+                        <span class="chip">.getElementById</span>
+                        <span class="chip">.Manipulation</span>
+                    </div> <br>
+                    </div>
+                    <br>
+                </article>
+
+                <article class="card">
+                    <h3>📘 Unterschied</h3>
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>.innerHTML</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Gibt den kompletten HTML-Inhalt eines Elements zurück oder ändert ihn.</li>
+                            <li>Man kann damit HTML-Tags einfügen, ersetzen oder umwandeln.</li>
+                            <li>Beispiel: Aus einem <em>h1</em> kann man durch Manipulation ein <em>p</em> machen.</li>
+                        </ul>
+                        <h4>.innerText</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Greift nur auf den sichtbaren Text innerhalb eines Tags zu.</li>
+                            <li>Ändert keine Tags, sondern ausschließlich den Text selbst.</li>
+                            <li> <em>Beispiel:</em>document.getElementById("title").innerText<strong>= "Nur Text geändert"</strong></li>
+                        </ul>
+                        <h4>📦 Anwendungsfälle</h4>
+                        <ul>
+                            <li>.innerHTML → Wenn man bewusst HTML-Struktur ändern oder Tags einfügen möchte (z. B. p / b / span).</li>
+                            <li>.innerText → Wenn man nur den Text ändern möchte, ohne die Struktur oder Tags anzutasten (z. B. für Eingaben aus Textboxen).</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- HTML-Einbindung -->
+                <article class="card">
+                    <h3>HTMl Implimintierung</h3>
+                    <strong id="oldText">Dieser Satz ergibt ohne JavaScript überhaupt keinen Sinn!</strong>
+                </article>
+
+            </article>
+        </section>
+
+        <!-- Aufgabe: Button hinzufügen -->
+        <section id="Aufgabe" class="section">
+
+            <article class="card">
+                <h2>Aufgabe: Button hinzufügen</h2>
+                <article class="card">
+                    <h3>Beispiel</h3>
+                    <span>Merksatz</span> <br>
+                    <small>kleine randnotiz</small>
+                    <div class="chips">
+                        <span class="chip">HTMl</span>
+                        <span class="chip">function</span>
+                    </div> <br>
+                    </div>
+                    <br>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>Aufgabe 1</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Erstelle mit Hilfe von JavaScript einen Button innerhalb einer div.</li>
+                            <li>Tipp: Im besten Fall bekommt der Button hier schon eine id.</li>
+                            <li> <em>Beispiel:</em>console.log<strong></strong>// </li>
+                        </ul>
+                        <h4>Aufgabe 2</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li>Füge diesem Button wieder mit Hilfe von JavaScript den Text hinzu "Klick mich"</li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- HTML-Einbindung -->
+                <article class="card">
+                    <h3>Lösung der Aufgabe</h3>
+                    <div id="taskDiv"></div>
+                </article>
+            </article>
+        </section>
+
+        <!-- Master -->
+        <section id="Master" class="section">
+
+            <article class="card">
+                <h2>Beispiel</h2>
+                <article class="card">
+                    <h3>Beispiel</h3>
+                    <span>Merksatz</span> <br>
+                    <small>kleine randnotiz</small>
+                    <div class="chips">
+                        <span class="chip">HTMl</span>
+                        <span class="chip">function</span>
+                    </div> <br>
+                    </div>
+                    <br>
+
+                    <div class="btn" style="display:block; padding:10px 14px; margin:4px">
+                        <h4>Beispiel</h4>
+                        <ul style="list-style: disc; list-style-position: inside; margin:0; padding-left: 0.75rem;">
+                            <li></li>
+                            <li></li>
+                            <li> <em>Beispiel:</em>console.log<strong></strong>// </li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- HTML-Einbindung -->
+                <article class="card">
+                    <h3>HTMl Implimintierung</h3>
+                    <input id="" type="text" placeholder="Eingabe">
+                    <input id="" type="text" placeholder="Eingabe">
+                    <button onclick="" id="task1">Bestätigen</button>
+                    <div id=""></div>
+                </article>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>

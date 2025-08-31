@@ -61,11 +61,12 @@ aside {
     background: conic-gradient(from 210deg, var(--accent), var(--accent-2));
     box-shadow: var(--shadow)
 }
+
 .logo2 {
     width: 64px;
     height: 64px;
-    /* border-radius: 14px; */
-    /* box-shadow: var(--shadow) */
+    border-radius: 14px;
+    box-shadow: var(--shadow)
 }
 
 .logo3 {
@@ -194,10 +195,15 @@ header.appbar.info {
     margin: 0 0 6px
 }
 
+.card h4 {
+    margin: 0 0 0px
+}
+
 .chips {
     display: flex;
     gap: 6px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-top: 4px;
 }
 
 .chip {
@@ -320,29 +326,33 @@ body:has(#notes:target) nav a[href="#notes"] {
 
 
 /* Tabellen im Card-Look */
-.data-table{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0;
-  overflow:hidden;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  background:linear-gradient(180deg,#0e1226,#0a0e1e);
-  box-shadow:var(--shadow);
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, #0e1226, #0a0e1e);
+    box-shadow: var(--shadow);
 }
+
 .data-table th,
-.data-table td{
-  text-align:left;
-  padding:12px 14px;
-  border-top:1px solid var(--border);
-  vertical-align:top;
+.data-table td {
+    text-align: left;
+    padding: 12px 14px;
+    border-top: 1px solid var(--border);
+    vertical-align: top;
 }
-.data-table thead th{
-  color:var(--muted);
-  border-bottom:1px solid var(--border);
-  border-top:none;
+
+.data-table thead th {
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    border-top: none;
 }
 
 /* engeres Padding optional */
 .data-table--compact th,
-.data-table--compact td{ padding:10px 12px; }
+.data-table--compact td {
+    padding: 10px 12px;
+}
