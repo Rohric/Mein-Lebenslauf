@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3b4972e44310dac102f9c5b28b283812958602f0
 :root {
     --bg: #0f1220;
     /* dunkles Violett/Blau */
@@ -375,6 +378,10 @@ body:has(#notes:target) nav a[href="#notes"] {
 .data-table--compact th,
 .data-table--compact td {
     padding: 10px 12px;
+<<<<<<< HEAD
 }
 =======
 >>>>>>> parent of 365b552 (eigenbau der index)
+=======
+}
+>>>>>>> 3b4972e44310dac102f9c5b28b283812958602f0
