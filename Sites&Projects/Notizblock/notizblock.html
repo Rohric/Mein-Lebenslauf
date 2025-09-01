@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock 2.0</title>
+
+    <script src="./notizblock.js"></script>
+</head>
+
+<body onload="init()">
+    <h1>Notizblock</h1>
+
+    <input id="notizenTitel" type="text" placeholder="Titel">
+    <input id="notiz" type="text" placeholder="Notiz">
+
+    <button onclick="addNote()" id="senden">Notiz speichern</button>
+
+    <h2>Notizen</h2>
+    <div id="content1"></div>
+
+    <h2>Papierkorb</h2>
+    <div id="content2"></div>
+
+</body>
+
+</html>  

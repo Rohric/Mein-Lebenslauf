@@ -1,0 +1,35 @@
+/* Global */
+body {
+  margin: 0px;
+  background-image: url(../../../img/Projects/Baclground-Color-Marmor.png);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+h2,p{
+    margin: 0;
+    padding: 8px;
+}
+
+/* Header */
+header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-image: url(../../../img/Projects/Baclground-Color-Marmor.png);
+  background-position: center;
+  background-size: cover;
+  img{
+   width: 64px;
+  }
+}
+ section{
+    text-align: center;
+    margin: 0;
+ }
+ .color1{
+    background-color: rgba(146, 70, 207, 0.493);
+ }
+.color2{
+    background-color: rgba(42, 54, 167, 0.5);
+ }
