@@ -3,6 +3,10 @@
 
 let notizenTitel = ["Fruit", "Aufgabe"];
 let notizen = ["banana", "rasen mähen"];
+
+let archivNotizen = [];
+let archivNotizTitel = [];
+
 let müllNotizen = [];
 let müllNotizenTitel = [];
 
@@ -10,6 +14,8 @@ let müllNotizenTitel = [];
 function init() {
   getFromLocalStorage();
   showNote();
+  showTrash();
+  showArchiv()
 }
 
 function showNote() {
@@ -21,27 +27,33 @@ function showNote() {
   }
 }
 
+function showArchiv() {
+  let archivContentRef = document.getElementById("content3");
+  archivContentRef.innerHTML = "";
+
+  for (
+    let indexArchivNotizen = 0;
+    indexArchivNotizen < archivNotizen.length;
+    indexArchivNotizen++
+  ) {
+    archivContentRef.innerHTML += getArchivNoteTemplate(indexArchivNotizen);
+  }
+}
+
 function showTrash() {
-  let müll = document.getElementById("content2");
-  müll.innerHTML = "";
+  let müllContentRef = document.getElementById("content2");
+  müllContentRef.innerHTML = "";
 
   for (
     let indexMüllNotizen = 0;
     indexMüllNotizen < müllNotizen.length;
     indexMüllNotizen++
   ) {
-    müll.innerHTML += gettrashNoteTemplate(indexMüllNotizen);
+    müllContentRef.innerHTML += getTrashNoteTemplate(indexMüllNotizen);
   }
 }
 
-// wo werden sie angezeigt?
-function getNoteTemplate(indexNotizen) {
-  return `<p>+ ${notizen[indexNotizen]}<button onclick="moveToTrash(${indexNotizen})" id="moveToTrash">X</button></p>`;
-}
 
-function gettrashNoteTemplate(indexMüllNotizen) {
-  return `<p>+ ${müllNotizen[indexMüllNotizen]}<button onclick="deleteNote(${indexMüllNotizen})" id="moveToTrash">X</button></p>`;
-}
 
 //Notiz hinzufügen
 function addNote() {
@@ -52,22 +64,37 @@ function addNote() {
   showNote();
   noteInputRef.value = ""; // Eingabefeld leeren
 }
-
-// Notiz in Papierkorb bewegen
-function moveToTrash(indexNotizen) {
-  let trashNote = notizen.splice(indexNotizen, 1);
-  müllNotizen.push(trashNote);
+//Notiz ins archiv bewegen
+function moveToArchiv(indexArchivNotizen) {
+  let archivNote = notizen.splice(indexArchivNotizen, 1)[0];
+  archivNotizen.push(archivNote);
+  saveToLocalStorage()
   showNote();
+  showArchiv()
   showTrash();
 }
 
-function deleteNote() {
-  müllNotizen.splice(müllNotizen, 1); // 1. Aus Array löschen
-  localStorage.removeItem("notizen");// 2. aus Lokal Storrage löschen
- 
+// Notiz in Papierkorb bewegen
+function moveToTrash(indexMüllNotizen) {
+  let trashNote = archivNotizen.splice(indexMüllNotizen, 1);
+  müllNotizen.push(trashNote);
+  saveToLocalStorage()
+  showNote();
+  showArchiv()
+  showTrash();
+}
+
+
+
+// Notiz endgültig löschen
+function deleteNote(index) {
+  müllNotizen.splice(index, 1); // 1. Aus Array löschen
+  localStorage.removeItem("notizen"); // 2. aus Lokal Storrage löschen
+
   saveToLocalStorage(); // 3. Array wieder in LocalStorage speichern
   showNote();
   showTrash();
+  showArchiv()
 }
 
 // Local Storage
@@ -87,16 +114,29 @@ function saveData() {
 
 function saveToLocalStorage() {
   localStorage.setItem("notizen", JSON.stringify(notizen));
+  localStorage.setItem("archiv", JSON.stringify(archivNotizen));
+  localStorage.setItem("müll", JSON.stringify(müllNotizen));
 }
 
-// function removeFromLocalStorage(){
-//   localStorage.setItem("notizen", JSON.stringify(notizen));
-//   localStorage.removeItem("notizen");
-// }
+
 
 function getFromLocalStorage() {
-  let myArr = JSON.parse(localStorage.getItem("notizen"));
-  if (myArr) {
-    notizen = myArr;
+  let n = JSON.parse(localStorage.getItem("notizen"));
+  let a = JSON.parse(localStorage.getItem("archiv"));
+  let m = JSON.parse(localStorage.getItem("müll"));
+  if (n) {
+    notizen = n;
   }
+  if (a) {archivNotizen = a
+    
+  }
+  if (m) müllNotizen = m;
 }
+
+
+
+document.getElementById("notiz").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    addNote(); 
+  }
+});

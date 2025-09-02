@@ -5,24 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notizblock 2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/note.css">
+    <link rel="stylesheet" href="./styles/standart.css">
 
-    <script src="./notizblock.js"></script>
+
+    <script src="./notizblock.js" defer></script>
+    <script src="./scripts/templates.js" defer></script>
 </head>
 
 <body onload="init()">
     <h1>Notizblock</h1>
+    <div class="inputbox"> <input id="notizenTitel" type="text" placeholder="Titel">
+        <input id="notiz" type="text" placeholder="Notiz">
+        <button onclick="addNote()" id="senden">Notiz speichern</button>
+    </div>
 
-    <input id="notizenTitel" type="text" placeholder="Titel">
-    <input id="notiz" type="text" placeholder="Notiz">
 
-    <button onclick="addNote()" id="senden">Notiz speichern</button>
+
 
     <h2>Notizen</h2>
-    <div id="content1"></div>
+    <div class="notebox" id="content1"></div>
+
+    <h2>Archiv</h2>
+    <div class="notebox" id="content3"></div>
 
     <h2>Papierkorb</h2>
-    <div id="content2"></div>
+    <div class="notebox" id="content2"></div>
 
 </body>
 
-</html>  
+</html>
