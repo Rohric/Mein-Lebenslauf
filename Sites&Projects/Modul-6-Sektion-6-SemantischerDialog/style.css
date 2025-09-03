@@ -1,0 +1,24 @@
+.dialog_1{
+    border: 5px solid red;
+    transform: translateX(300px);
+    transition: all 2s ease-in;
+}
+
+.dialog_1.opened{
+    border: 5px solid red;
+    transform: translateX(0px);
+    transition: all 1s ease-in;
+}
+
+
+.dialog_1::backdrop{
+    opacity: 0;
+    background-color: rgba(0, 0, 0,);
+    transition: all 1s ease-in;
+}
+
+.dialog_1.opened::backdrop{
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+
